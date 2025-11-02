@@ -170,7 +170,7 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col bg-black overflow-hidden select-none">
       {/* Gradient overlay at top */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-linear-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-20" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-20" />
 
       {/* Header with transparent background */}
       <motion.header
