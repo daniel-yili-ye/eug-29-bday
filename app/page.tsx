@@ -213,14 +213,14 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col bg-black overflow-hidden select-none">
       {/* Gradient overlay at top */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-20" />
+      <div className="fixed top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none z-20" />
 
       {/* Header with transparent background */}
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoaded ? 1 : 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative z-30 px-2 pt-3"
+        className="fixed top-0 left-0 right-0 z-30 px-2 pt-3 bg-black/60 backdrop-blur-sm"
       >
         {/* Group info */}
         <div className="flex flex-col items-center pb-3 relative">
@@ -246,8 +246,12 @@ export default function Home() {
       {/* Messages container */}
       <main
         ref={messagesContainerRef}
-        className="flex-1 overflow-y-auto px-3 pt-4 pb-12 ios-scroll"
-        style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
+        className="flex-1 overflow-y-auto px-3 pt-4 pb-12 ios-scroll mt-24 min-h-0"
+        style={{
+          scrollBehavior: "smooth",
+          WebkitOverflowScrolling: "touch",
+          overscrollBehavior: "contain",
+        }}
       >
         <div className="max-w-2xl mx-auto">
           <AnimatePresence mode="popLayout">
