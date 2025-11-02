@@ -22,6 +22,13 @@ type TextMessage = BaseMessage & {
   text: string;
 };
 
+type ImageMessage = BaseMessage & {
+  type: "image";
+  imageUrl: string;
+};
+
+type Message = TextMessage | ImageMessage;
+
 const wait = (ms: number) =>
   new Promise<void>((resolve) => {
     const timeout = setTimeout(() => {
@@ -74,7 +81,7 @@ function MessageBubble({
   showAvatar,
 }: {
   participant: Participant | undefined;
-  message: TextMessage;
+  message: Message;
   showAvatar: boolean;
 }) {
   const isSelf = participant?.isSelf;
@@ -90,30 +97,45 @@ function MessageBubble({
           {participant?.name}
         </span>
       )}
-      <div
-        className={`
-          px-3.5 py-2.5 rounded-[18px] transition-shadow relative
-          ${
-            isSelf
-              ? "bg-[#0B84FF] text-white shadow-lg"
-              : "bg-[#3A3A3C] text-white shadow-md"
-          }
-        `}
-      >
-        <p className="text-[15px] leading-[1.35] wrap-break-word whitespace-pre-line">
-          {message.text}
-        </p>
-      </div>
+      {message.type === "image" ? (
+        <div
+          className={`
+            rounded-[18px] overflow-hidden shadow-lg relative
+            ${isSelf ? "max-w-[75%]" : "max-w-[75%]"}
+          `}
+        >
+          <img
+            src={message.imageUrl}
+            alt="Shared photo"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      ) : (
+        <div
+          className={`
+            px-3.5 py-2.5 rounded-[18px] transition-shadow relative
+            ${
+              isSelf
+                ? "bg-[#0B84FF] text-white shadow-lg"
+                : "bg-[#3A3A3C] text-white shadow-md"
+            }
+          `}
+        >
+          <p className="text-[15px] leading-[1.35] wrap-break-word whitespace-pre-line">
+            {message.text}
+          </p>
+        </div>
+      )}
     </div>
   );
 }
 
 export default function Home() {
   const messages = useMemo(() => {
-    return chatData.messages as TextMessage[];
+    return chatData.messages as Message[];
   }, []);
 
-  const [displayedMessages, setDisplayedMessages] = useState<TextMessage[]>([]);
+  const [displayedMessages, setDisplayedMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const [currentTypingSender, setCurrentTypingSender] = useState("");
   const [currentTypingAvatar, setCurrentTypingAvatar] = useState("");
@@ -144,22 +166,39 @@ export default function Home() {
             showNextMessage();
           }, 500);
         } else {
-          setIsTyping(true);
-          setCurrentTypingSender(participant?.name || "");
-          setCurrentTypingAvatar(getInitials(participant?.name || ""));
-          setCurrentTypingAvatarImage(participant?.avatar);
-
-          const delay =
-            nextMessage.typingDelayMs ?? chatData.defaultTypingDelayMs ?? 2000;
-
-          timeoutId = setTimeout(() => {
-            setIsTyping(false);
-            setDisplayedMessages((prev) => [...prev, nextMessage]);
-            currentIndex++;
+          // Skip typing indicator for image messages
+          if (nextMessage.type === "image") {
+            const delay =
+              nextMessage.typingDelayMs ??
+              chatData.defaultTypingDelayMs ??
+              2000;
             timeoutId = setTimeout(() => {
-              showNextMessage();
-            }, 500);
-          }, delay);
+              setDisplayedMessages((prev) => [...prev, nextMessage]);
+              currentIndex++;
+              timeoutId = setTimeout(() => {
+                showNextMessage();
+              }, 500);
+            }, delay);
+          } else {
+            setIsTyping(true);
+            setCurrentTypingSender(participant?.name || "");
+            setCurrentTypingAvatar(getInitials(participant?.name || ""));
+            setCurrentTypingAvatarImage(participant?.avatar);
+
+            const delay =
+              nextMessage.typingDelayMs ??
+              chatData.defaultTypingDelayMs ??
+              2000;
+
+            timeoutId = setTimeout(() => {
+              setIsTyping(false);
+              setDisplayedMessages((prev) => [...prev, nextMessage]);
+              currentIndex++;
+              timeoutId = setTimeout(() => {
+                showNextMessage();
+              }, 500);
+            }, delay);
+          }
         }
       }
     };
