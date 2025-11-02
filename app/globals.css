@@ -24,3 +24,50 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Typing dots animation */
+.typing-dot-dark {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  animation: typing-dot 1.4s infinite ease-in-out;
+}
+
+@keyframes typing-dot {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* iOS-style scrollbar */
+.ios-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hover effects */
+.hover-elevate {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hover-elevate:hover {
+  transform: translateY(-1px);
+}
+
+.active-elevate-2:active {
+  transform: translateY(0px);
+}
+
+/* Safe area for bottom */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

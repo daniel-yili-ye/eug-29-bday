@@ -1,0 +1,145 @@
+{
+  "chatTitle": "HAPPY 29TH BIRTHDAY EUG 🥳",
+  "defaultTypingDelayMs": 2000,
+  "participants": [
+    {
+      "id": "daniel-ye",
+      "name": "Daniel Ye",
+      "isSelf": true,
+      "avatar": "/avatars/daniel-ye.png"
+    },
+    {
+      "id": "jonathan-wong",
+      "name": "Jonathan Wong",
+      "avatar": "/avatars/jonathan-wong.png"
+    },
+    {
+      "id": "rachel-duan",
+      "name": "Rachel Duan",
+      "avatar": "/avatars/rachel-duan.png"
+    },
+    {
+      "id": "joshua-wong",
+      "name": "Joshua Wong",
+      "avatar": "/avatars/joshua-wong.png"
+    },
+    {
+      "id": "christa-ng",
+      "name": "Christa Ng",
+      "avatar": "/avatars/christa-ng.png"
+    },
+    {
+      "id": "rivka-lee",
+      "name": "Rivka Lee",
+      "avatar": "/avatars/rivka-lee.png"
+    },
+    {
+      "id": "kelly-wu",
+      "name": "Kelly Wu",
+      "avatar": "/avatars/kelly-wu.png"
+    },
+    {
+      "id": "zoey-sun",
+      "name": "Zoey Sun",
+      "avatar": "/avatars/zoey-sun.png"
+    },
+    {
+      "id": "monique-lussier",
+      "name": "Monique Lussier",
+      "avatar": "/avatars/monique-lussier.png"
+    }
+  ],
+  "messages": [
+    {
+      "senderId": "daniel-ye",
+      "type": "text",
+      "text": "Hey Guys, its Eug's Bday, please write something nice for her 🥺.",
+      "typingDelayMs": 0
+    },
+    {
+      "senderId": "jonathan-wong",
+      "type": "text",
+      "text": "Something nice",
+      "typingDelayMs": 0
+    },
+    {
+      "senderId": "jonathan-wong",
+      "type": "text",
+      "text": "Hey EUGE! \n\nYou're pretty cool! I like how you are so wildly inappropriate.  But you always have great energy and are always considerate 😁。Excited to see how you and Daniel will grow in your relationship with each other and with God. And all the rectal examinations you'll do. Thanks for the chocolate croissant by the way. Excited for the adventures we'll do in the future! Wishing you the bestest birthday!",
+      "typingDelayMs": 4000
+    },
+    {
+      "senderId": "jonathan-wong",
+      "type": "text",
+      "text": "PS this is not AI or automated, unlike Daniel's",
+      "typingDelayMs": 1000
+    },
+    {
+      "senderId": "joshua-wong",
+      "type": "text",
+      "text": "hey eug!!! oh my gosh its ur birthday. i feel like its only been last week that we were there to witness your absolutely amazing reaction to getting proposed on with the one piece and that random blue jacket. honestly i don't even know where to begin but thanks for being such a legendary friend. i feel like you bring so much joy to everyone around you and everytime i see you i just can't stop laughing like crazy. from racing to pho noc yen and world on yonge, to biking in amsterdam, to night calls with daniel giving me advice for more than one stuff, i want you know that i really appreciate how funny and caring you are. happy birthday eug and cheers 👀 to many more years of friendship!",
+      "typingDelayMs": 5000
+    },
+    {
+      "senderId": "joshua-wong",
+      "type": "text",
+      "text": "ps this message has been written without the use of any artificial intelligence, or automation, unlike daniel :p",
+      "typingDelayMs": 1000
+    },
+    {
+      "senderId": "joshua-wong",
+      "type": "text",
+      "text": "pps this is my joke jonathan stole it",
+      "typingDelayMs": 1000
+    },
+    {
+      "senderId": "christa-ng",
+      "type": "text",
+      "text": "Happy birthday eug!!! Can you believe you're almost hitting 30? LOL jk I am too, and many people say 30s is when we peak so cheers to peaking next year! \n\n So grateful for another year that I've been blessed by your friendship 🫶🏻 you never fail to make me laugh, encourage me through hardships, and diagnose all the illnesses that I have. So excited to celebrate your birthday with you and cannot wait for what adventure we go on next!! 👀",
+      "typingDelayMs": 5000
+    },
+    {
+      "senderId": "rivka-lee",
+      "type": "text",
+      "text": "Ahh I would love love to celebrate eug for her bday, but Nov 2 is also my mom's birthday and we are having a family dinner that evening! 🥺",
+      "typingDelayMs": 5000
+    },
+    {
+      "senderId": "rachel-duan",
+      "type": "text",
+      "text": "MY LOVE! HAPPY HAPPY BIRTHDAY 🥳 What a beautiful day to celebrate the most beautiful girl  Eugenia you truly have a heart of gold and are one of the best friends a person could have. Your genuine care for your friends and patients are so evident by how you check-in, how your remember, and you have this special gift of making those around you so loved. I LOVE laughing with you, joking with you, having picnics with you and just calling / texting with you to catch up. I love how you are SO CHILL always, even though you literally save lives and are actually a HUGE deal, yet you’re so welcoming and down to earth. Words cannot fully express how much I love you, but know that it’s A LOT and I am forever grateful that God let me meet a sister in Christ like you. Here’s to many more years of celebrating your beautiful God glorifying life together. I love you ❤️",
+      "typingDelayMs": 5000
+    },
+    {
+      "senderId": "kelly-wu",
+      "type": "text",
+      "text": "I'll order that pistachio cake she loved last year and bring candles!",
+      "typingDelayMs": 5000
+    },
+    {
+      "senderId": "zoey-sun",
+      "type": "text",
+      "text": "嗨，Eug！愿你的生日充满上帝的爱，再加点额外的糖霜！",
+      "typingDelayMs": 3000
+    },
+    {
+      "senderId": "zoey-sun",
+      "type": "text",
+      "text": "Hi, Eug! May your birthday sparkle with God's love and a little extra frosting on top!",
+      "typingDelayMs": 3000
+    },
+    {
+      "senderId": "monique-lussier",
+      "type": "text",
+      "text": "Happy Birthday Eugenia! You're such an amazing, kind, and funny friend! I hope your day is filled with love and laughter celebrated with the people around you, you deserve the best! Love ya",
+      "typingDelayMs": 2000
+    },
+    {
+      "senderId": "daniel-ye",
+      "type": "text",
+      "text": "Thanks everyone! Eug is going to lose it when she walks in—appreciate all of you 💙",
+      "typingDelayMs": 2000,
+      "isFinal": true
+    }
+  ]
+}
