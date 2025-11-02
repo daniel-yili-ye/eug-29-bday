@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Video, Plus, Mic } from "lucide-react";
+import { Video } from "lucide-react";
 import chatData from "./data/chatMessages.json";
 
 type Participant = {
@@ -382,28 +382,6 @@ export default function Home() {
           </AnimatePresence>
         </div>
       </main>
-
-      {/* Bottom input bar */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-gray-800/50 px-2 py-2 safe-area-bottom z-30">
-        <div className="flex items-center gap-2 max-w-2xl mx-auto">
-          <button className="w-8 h-8 rounded-full bg-gray-800/80 flex items-center justify-center hover-elevate active-elevate-2 shrink-0">
-            <Plus className="w-5 h-5 text-white" />
-          </button>
-
-          <div className="flex-1 bg-[#1C1C1E] rounded-[18px] px-4 py-1 flex items-center min-h-[36px]">
-            <input
-              type="text"
-              placeholder="iMessage"
-              className="flex-1 bg-transparent text-white placeholder-gray-500 text-[16px] outline-none"
-              disabled
-            />
-          </div>
-
-          <button className="w-8 h-8 rounded-full bg-gray-800/80 flex items-center justify-center hover-elevate active-elevate-2 shrink-0">
-            <Mic className="w-4 h-4 text-white" />
-          </button>
-        </div>
-      </div>
     </div>
   );
 }
