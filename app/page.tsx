@@ -117,6 +117,9 @@ export default function Home() {
   const [isTyping, setIsTyping] = useState(false);
   const [currentTypingSender, setCurrentTypingSender] = useState("");
   const [currentTypingAvatar, setCurrentTypingAvatar] = useState("");
+  const [currentTypingAvatarImage, setCurrentTypingAvatarImage] = useState<
+    string | undefined
+  >(undefined);
   const [isLoaded, setIsLoaded] = useState(false);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
 
@@ -144,6 +147,7 @@ export default function Home() {
           setIsTyping(true);
           setCurrentTypingSender(participant?.name || "");
           setCurrentTypingAvatar(getInitials(participant?.name || ""));
+          setCurrentTypingAvatarImage(participant?.avatar);
 
           const delay =
             nextMessage.typingDelayMs ?? chatData.defaultTypingDelayMs ?? 2000;
@@ -226,12 +230,36 @@ export default function Home() {
                 >
                   {/* Avatar for non-user messages - always shown */}
                   {!participant?.isSelf && (
-                    <div
-                      className={`w-7 h-7 rounded-full ${getAvatarColor(
-                        participant?.name || ""
-                      )} flex items-center justify-center text-white text-[10px] font-semibold shrink-0`}
-                    >
-                      {getInitials(participant?.name || "")}
+                    <div className="w-7 h-7 rounded-full shrink-0 overflow-hidden">
+                      {participant?.avatar ? (
+                        <img
+                          src={participant.avatar}
+                          alt={participant?.name || ""}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to colored circle with initials if image fails to load
+                            const target = e.currentTarget;
+                            target.style.display = "none";
+                            const parent = target.parentElement;
+                            if (parent) {
+                              parent.className = `w-7 h-7 rounded-full ${getAvatarColor(
+                                participant?.name || ""
+                              )} flex items-center justify-center text-white text-[10px] font-semibold shrink-0`;
+                              parent.textContent = getInitials(
+                                participant?.name || ""
+                              );
+                            }
+                          }}
+                        />
+                      ) : (
+                        <div
+                          className={`w-full h-full ${getAvatarColor(
+                            participant?.name || ""
+                          )} flex items-center justify-center text-white text-[10px] font-semibold`}
+                        >
+                          {getInitials(participant?.name || "")}
+                        </div>
+                      )}
                     </div>
                   )}
 
@@ -261,12 +289,34 @@ export default function Home() {
                 className="mb-2 flex items-end gap-2 justify-start"
               >
                 {/* Avatar */}
-                <div
-                  className={`w-7 h-7 rounded-full ${getAvatarColor(
-                    currentTypingSender
-                  )} flex items-center justify-center text-white text-[10px] font-semibold shrink-0`}
-                >
-                  {currentTypingAvatar}
+                <div className="w-7 h-7 rounded-full shrink-0 overflow-hidden">
+                  {currentTypingAvatarImage ? (
+                    <img
+                      src={currentTypingAvatarImage}
+                      alt={currentTypingSender}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback to colored circle with initials if image fails to load
+                        const target = e.currentTarget;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.className = `w-7 h-7 rounded-full ${getAvatarColor(
+                            currentTypingSender
+                          )} flex items-center justify-center text-white text-[10px] font-semibold shrink-0`;
+                          parent.textContent = currentTypingAvatar;
+                        }
+                      }}
+                    />
+                  ) : (
+                    <div
+                      className={`w-full h-full ${getAvatarColor(
+                        currentTypingSender
+                      )} flex items-center justify-center text-white text-[10px] font-semibold`}
+                    >
+                      {currentTypingAvatar}
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex flex-col items-start max-w-[75%]">

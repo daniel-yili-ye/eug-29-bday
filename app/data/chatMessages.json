@@ -1,6 +1,6 @@
 {
   "chatTitle": "HAPPY 29TH BIRTHDAY EUG 🥳",
-  "defaultTypingDelayMs": 2000,
+  "defaultTypingDelayMs": 5000,
   "participants": [
     {
       "id": "daniel-ye",
@@ -53,7 +53,7 @@
     {
       "senderId": "daniel-ye",
       "type": "text",
-      "text": "Hey Guys, its Eug's Bday, please write something nice for her 🥺.",
+      "text": "Hey, its Eug's Bday, please write something nice for her 🥺.",
       "typingDelayMs": 0
     },
     {
@@ -101,7 +101,7 @@
     {
       "senderId": "rivka-lee",
       "type": "text",
-      "text": "Ahh I would love love to celebrate eug for her bday, but Nov 2 is also my mom's birthday and we are having a family dinner that evening! 🥺",
+      "text": "My love, Eugenia, Happy Birthday!! 💛\n\n I’m so thankful for you, and for the friendship we’ve built over the years. You’ve become such a steady, joy-filled part of my life - someone who’s easy to laugh with, talk to, and just do life alongside. I’ve loved getting to make so many memories together, especially with you, Jordan, and Daniel. Whether it’s random hangouts, trying out new foods, or our Vancouver trip, those moments have honestly been some of my favourites.\nIt’s been really beautiful watching how much you’ve grown!!!  I’ve seen so much growth especially in your faith and in how you’ve walked through so many changes this past year. Moving back to Mississauga, navigating things with your parents, and now stepping into this new season with Daniel are some big changes that you’ve been going through and you’ve handled it all with such grace, faith, and strength.\n\n I am super excited for you in this next year of your life!!! Seeing your story unfold from single to dating and now engaged has been so so special!!!  You and Daniel complement each other so well with your humour, care for each other, and it’s been amazing seeing you two grow together while serving and building community. I’m so excited for all that’s ahead: the wedding planning, the marriage, and everything God has in store for you both.\nYou’re such a one-of-a-kind human - quirky, grounded, and genuinely caring. You bring so much laughter and light wherever you go (and of course, you’ll always be one of da bois 😎).\n\nPraying this next year brings you even more joy, peace, and little reminders of how deeply loved and supported you are by God and by everyone around you. So proud of who you are, Eug, and grateful I get to call you a friend and a sister 💛 To more cheers 👀!!!! OKEY OKEY OKEY 🤩",
       "typingDelayMs": 5000
     },
     {
@@ -113,32 +113,39 @@
     {
       "senderId": "kelly-wu",
       "type": "text",
-      "text": "I'll order that pistachio cake she loved last year and bring candles!",
+      "text": "EUUYYYYYYYYYGE happy birthday my dudes.",
       "typingDelayMs": 5000
     },
     {
       "senderId": "zoey-sun",
       "type": "text",
       "text": "嗨，Eug！愿你的生日充满上帝的爱，再加点额外的糖霜！",
-      "typingDelayMs": 3000
+      "typingDelayMs": 5000
     },
     {
       "senderId": "zoey-sun",
       "type": "text",
       "text": "Hi, Eug! May your birthday sparkle with God's love and a little extra frosting on top!",
-      "typingDelayMs": 3000
+      "typingDelayMs": 1000
     },
     {
       "senderId": "monique-lussier",
       "type": "text",
       "text": "Happy Birthday Eugenia! You're such an amazing, kind, and funny friend! I hope your day is filled with love and laughter celebrated with the people around you, you deserve the best! Love ya",
-      "typingDelayMs": 2000
+      "typingDelayMs": 5000
     },
     {
       "senderId": "daniel-ye",
       "type": "text",
-      "text": "Thanks everyone! Eug is going to lose it when she walks in—appreciate all of you 💙",
-      "typingDelayMs": 2000,
+      "text": "Hey my love, happy 29th birthday <3 I am so glad that I could celebrate this special day with you and so many of your special friends in the special hood that we may end up in soon eating lots of special food.\n\nYou are truly truly such an awesome girl and I am so thankful that God has brought you into my life. I love you very much and every moment spent with you just feels so easy and fun. Your presence never fails to make a bad day a much better one, and your 1000000 decibel laugh always brings a big fat smile to my big fat face. I am very excited to call you my FIANCE especially when you said WHAT THE FRICK (yes) to WILL EUG WILL MARRY YE 💍🥺.\n\nThank you for always being so willing to serve with me at LivingStones and always being down to talk about the silliest things to the deepest things. I also truly admire your empathy towards others and how you deeply care for your friends / family. I have a lot to learn from you.\n\nCheers to another year around the sun my love, and I looking forward to catching many noise complaints from our neighbours in Rochasesvalle 😚.\n\nMuch Muah’s!\nDan",
+      "typingDelayMs": 5000,
+      "isFinal": true
+    },
+    {
+      "senderId": "daniel-ye",
+      "type": "text",
+      "text": "ps, AI did not write this message, only YePT did. also josh it was a blue guatemala shirt not a blue jacket 😅",
+      "typingDelayMs": 3000,
       "isFinal": true
     }
   ]
